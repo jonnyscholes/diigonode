@@ -8,11 +8,17 @@ Usage
 
 Mimics the API spec seen here https://www.diigo.com/api_dev
 
+Usage
+=========
+
+```bash
+npm install diigonode
+```
 
 Example: getting some links
 =====
 ```javascript
-var diigo = require('./diigonode.js');
+var diigo = require('diigonode');
 
 var getOptions = {
 	apiKey: '4305d35c3d2126bd',
@@ -35,7 +41,7 @@ diigo.getDiigo(getOptions, function(err, results) {
 Example: saving a link
 =====
 ```javascript
-var diigo = require('./diigonode.js');
+var diigo = require('diigonode');
 
 var saveOptions = {
 	apiKey: '4305d35c3d2126bd',
