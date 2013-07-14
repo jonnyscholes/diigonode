@@ -12,6 +12,8 @@ Mimics the API spec seen here https://www.diigo.com/api_dev
 Example: getting some links
 =====
 ```javascript
+var diigo = require('./diigonode.js');
+
 var getOptions = {
 	apiKey: '4305d35c3d2126bd',
 	username: 'username',
@@ -24,7 +26,7 @@ var getOptions = {
 	list: ''
 };
 
-var getResponse = testDiigo.getDiigo(getOptions, function(err, results) {
+var getResponse = diigo.getDiigo(getOptions, function(err, results) {
 	//do stuff with results
 });
 ```
@@ -33,6 +35,8 @@ var getResponse = testDiigo.getDiigo(getOptions, function(err, results) {
 Example: saving a link
 =====
 ```javascript
+var diigo = require('./diigonode.js');
+
 var saveOptions = {
 	apiKey: '4305d35c3d2126bd',
 	username: username,
@@ -44,7 +48,7 @@ var saveOptions = {
 	readLater: 'yes'
 };
 
-var getResponse = testDiigo.saveDiigo(saveOptions, function(err, results) {
+var getResponse = diigo.saveDiigo(saveOptions, function(err, results) {
 	//do stuff with results
 });
 ```
