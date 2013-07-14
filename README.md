@@ -26,7 +26,7 @@ var getOptions = {
 	list: ''
 };
 
-var getResponse = diigo.getDiigo(getOptions, function(err, results) {
+diigo.getDiigo(getOptions, function(err, results) {
 	//do stuff with results
 });
 ```
@@ -48,7 +48,7 @@ var saveOptions = {
 	readLater: 'yes'
 };
 
-var getResponse = diigo.saveDiigo(saveOptions, function(err, results) {
+diigo.saveDiigo(saveOptions, function(err, results) {
 	//do stuff with results
 });
 ```
