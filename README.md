@@ -8,7 +8,7 @@ Usage
 
 Mimics the API spec seen here https://www.diigo.com/api_dev
 
-Usage
+Install
 =========
 
 ```bash
@@ -16,7 +16,7 @@ npm install diigonode
 ```
 
 Example: getting some links
-=====
+=========
 ```javascript
 var diigo = require('diigonode');
 
@@ -39,7 +39,7 @@ diigo.getDiigo(getOptions, function(err, results) {
 
 
 Example: saving a link
-=====
+=========
 ```javascript
 var diigo = require('diigonode');
 
