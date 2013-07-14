@@ -4,7 +4,6 @@ module.exports = function(){
 	
 	function getDiigo(options, callback){
 		var uri = buildUri(options);
-		console.log(uri);
 	  request({ 
 	  	'uri': uri,
 	    'auth': {
@@ -26,7 +25,6 @@ module.exports = function(){
 	
 	function saveDiigo(options, callback){
 		var uri = buildUri(options);
-		console.log(uri);
 	  request({ 
 	  	'uri': uri,
 	  	'method': 'POST',
