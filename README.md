@@ -1,19 +1,18 @@
-diigonode
-=========
+#diigonode
 
 A wrapper for the Diigo bookmarking service API
 
-#Usage
+##Usage
 
 Mimics the API spec seen here https://www.diigo.com/api_dev
 
-#Install
+##Install
 
 ```bash
 npm install diigonode
 ```
 
-#Example: getting some links
+##Example: getting some links
 
 ```javascript
 var diigo = require('diigonode');
@@ -41,7 +40,7 @@ diigo.getDiigo(getOptions, auth, function(err, results) {
 ```
 
 
-#Example: saving a link
+##Example: saving a link
 
 ```javascript
 var diigo = require('diigonode');
