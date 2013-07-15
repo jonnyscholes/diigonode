@@ -1,0 +1,25 @@
+{
+  "name": "diigonode",
+  "version": "0.0.0",
+  "description": "A wrapper for the Diigo bookmarking service API",
+  "main": "diigonode.js",
+  "scripts": {
+    "test": "(test.js)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jonnyscholes/diigonode.git"
+  },
+  "keywords": [
+    "bookmarking",
+    "diigo",
+    "api"
+  ],
+  "author": "jonnyscholes",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "13e3c25b1569b6b9b8e1f284dc2f4beb372b7f10",
+  "dependencies": {
+    "request": "~2.22.0"
+  }
+}

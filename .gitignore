@@ -1,2 +1,6 @@
 
 *.espressostorage
+
+test.js
+
+node_modules/
