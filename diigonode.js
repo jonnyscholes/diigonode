@@ -1,14 +1,15 @@
 var request = require('request');
+var querystring = require('querystring');
 
 module.exports = function(){
 	
-	function getDiigo(options, callback){
-		var uri = buildUri(options);
-	  request({ 
+	function getDiigo(options, auth, callback){
+		var uri = 'https://secure.diigo.com/api/v2/bookmarks?' + querystring.stringify(options);
+	  request({
 	  	'uri': uri,
 	    'auth': {
-	      'user': options['username'],
-	      'pass': options['password'],
+	      'user': auth['username'],
+	      'pass': auth['password'],
 	      'sendImmediately': false
 	     }
 	  },
@@ -23,14 +24,14 @@ module.exports = function(){
 	  });	
 	}
 	
-	function saveDiigo(options, callback){
-		var uri = buildUri(options);
+	function saveDiigo(options, auth, callback){
+		var uri = 'https://secure.diigo.com/api/v2/bookmarks?' + querystring.stringify(options);
 	  request({ 
 	  	'uri': uri,
 	  	'method': 'POST',
 	    'auth': {
-	      'user': options['username'],
-	      'pass': options['password'],
+	      'user': auth['username'],
+	      'pass': auth['password'],
 	      'sendImmediately': false
 	     }
 	  },
@@ -44,24 +45,6 @@ module.exports = function(){
 	  	}
 	  });	
 	}
-
-  function buildUri(options){
-  	var uri = 'https://secure.diigo.com/api/v2/bookmarks?';
-  	for (var key in options) {
-  	  if(options.hasOwnProperty(key)) {
-  	  	if(key === 'apiKey'){
-  	    	uri += 'key=' + encodeURIComponent(options[key]);
-  	    }else if(key === 'password'){
-  	    	continue;
-  	    }else {
-  	    	if(typeof options[key] != 'undefined' && options[key].length > 0){
-  	    		uri += '&' + key + '=' + encodeURIComponent(options[key]);
-  	    	}
-  	    }
-  	  }
-  	}
-  	return uri;
-  }
   
   return {
     getDiigo: getDiigo,

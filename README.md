@@ -3,25 +3,28 @@ diigonode
 
 A wrapper for the Diigo bookmarking service API
 
-Usage
-=========
+#Usage
 
 Mimics the API spec seen here https://www.diigo.com/api_dev
 
-Install
-=========
+#Install
 
 ```bash
 npm install diigonode
 ```
 
-Example: getting some links
-=========
+#Example: getting some links
+
 ```javascript
 var diigo = require('diigonode');
 
+var auth = {
+	password: '',
+	username: ''
+}
+
 var getOptions = {
-	apiKey: '4305d35c3d2126bd',
+	key: '',
 	username: 'username',
 	password: 'password', 
 	start: '', 
@@ -32,21 +35,24 @@ var getOptions = {
 	list: ''
 };
 
-diigo.getDiigo(getOptions, function(err, results) {
+diigo.getDiigo(getOptions, auth, function(err, results) {
 	//do stuff with results
 });
 ```
 
 
-Example: saving a link
-=========
+#Example: saving a link
+
 ```javascript
 var diigo = require('diigonode');
 
+var auth = {
+	password: '',
+	username: ''
+}
+
 var saveOptions = {
-	apiKey: '4305d35c3d2126bd',
-	username: username,
-	password: password,
+	key: '',
 	title: 'Test Bookmark', 
 	url: 'http://www.test.com/', 
 	shared: 'no', 
@@ -54,10 +60,7 @@ var saveOptions = {
 	readLater: 'yes'
 };
 
-diigo.saveDiigo(saveOptions, function(err, results) {
+diigo.saveDiigo(saveOptions, auth, function(err, results) {
 	//do stuff with results
 });
 ```
-
-
-That's pretty much it. :D
